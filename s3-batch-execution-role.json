@@ -1,0 +1,41 @@
+{
+  "Type": "AWS::IAM::Role",
+  "Properties": {
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "batchoperations.s3.amazonaws.com"
+            ]
+          },
+          "Action": [
+            "sts:AssumeRole"
+          ]
+        }
+      ]
+    },
+    "Policies": [
+      {
+        "PolicyName": "S3BatchAccessPolicy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:PutObject",
+                "lambda:InvokeFunction"
+              ],
+              "Resource": "*"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

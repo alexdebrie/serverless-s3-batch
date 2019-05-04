@@ -1,0 +1,30 @@
+{
+  "name": "serverless-s3-batch",
+  "version": "1.0.1-rc3",
+  "description": "Serverless plugin to assist with S3 Batch jobs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexdebrie/serverless-s3-batch.git"
+  },
+  "keywords": [
+    "serverless",
+    "serverless-plugin",
+    "aws",
+    "s3",
+    "s3-batch"
+  ],
+  "author": "Alex DeBrie",
+  "license": "MIT",
+  "homepage": "https://github.com/alexdebrie/serverless-s3-batch",
+  "dependencies": {
+    "aws-sdk": "^2.447.0",
+    "bluebird": "^3.5.4",
+    "lodash.find": "^4.6.0",
+    "lodash.merge": "^4.6.1",
+    "semver": "^6.0.0"
+  }
+}
