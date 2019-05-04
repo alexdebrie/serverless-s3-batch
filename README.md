@@ -10,6 +10,16 @@ If you're running an S3 Batch operation that invokes a Lambda function, you may 
 
 For a deep dive and walkthrough on S3 Batch and this plugin, check out [this blog post](TODO).
 
+## Contents:
+
+- [Installation](#installation)
+- [Quickstart](#quickstart)
+- [Configuration](#configuration)
+  - [Manifest](#manifest)
+  - [Operation](#operation)
+  - [Report](#report)
+  - [Role ARN](#role-arn)
+
 ## Installation
 
 #### Install using Serverless plugin manager
@@ -31,7 +41,7 @@ plugins:
   - serverless-s3-batch
 ```
 
-## 	Quickstart
+## Quickstart
 
 1. Configure a function and basic usage of the plugin your `serverless.yml`:
 
@@ -61,7 +71,7 @@ plugins:
 2. Deploy your service
 
 	```
-	sls deploy
+	$ sls deploy
 	```
 	
 	This will deploy your function and create the IAM role to be used for your S3 Batch job.
@@ -69,11 +79,11 @@ plugins:
 3. Create your S3 Batch job
 
 	```
-	sls s3batch create
+	$ sls s3batch create
 	
 	Serverless: S3 Batch Job created. Job Id: 83e47ce1-0440-4b6c-b36b-284071fafe46
-Serverless:
-Serverless: View in browser: https://console.aws.amazon.com/s3/jobs/83e47ce1-0440-4b6c-b36b-284071fafe46
+	Serverless:
+	Serverless: View in browser: https://console.aws.amazon.com/s3/jobs/83e47ce1-0440-4b6c-b36b-284071fafe46
 	```
 	
 💥
@@ -92,7 +102,7 @@ custom:
     ...
 ```
 
-#### Manifest
+### Manifest
 
 Shorthand version:
 
@@ -113,7 +123,7 @@ custom:
       etag: 'ea42026f5e7aaa0addb4f0bb4131d4fb' # Optional. The plugin will fetch the latest ETag if you don't provide it.
 ```
 
-#### Operation
+### Operation
 
 Shorthand version:
 
@@ -136,7 +146,7 @@ custom:
 
 I'd like to add support for other operations but haven't yet.
 
-#### Report
+### Report
 
 Shorthand version:
 
@@ -158,7 +168,7 @@ custom:
       
 ```
 
-#### Role ARN
+### Role ARN
 
 The plugin creates a role for use with your S3 Batch job.
 
