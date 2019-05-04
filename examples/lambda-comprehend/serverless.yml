@@ -1,0 +1,27 @@
+service: s3-batch
+
+plugins:
+  - serverless-s3-batch
+
+custom:
+  s3batch:
+    manifest: s3://${env:S3_BATCH_BUCKET}/manifest.txt
+    report: s3://${env:S3_BATCH_BUCKET}/reports
+    operation: detectSentiment
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action: "s3:GetObject"
+      Resource: "arn:aws:s3:::${env:S3_BATCH_BUCKET}"
+    - Effect: Allow
+      Action: "comprehend:DetectSentiment"
+      Resource: "*"
+
+functions:
+  detectSentiment:
+    handler: handler.detect_sentiment

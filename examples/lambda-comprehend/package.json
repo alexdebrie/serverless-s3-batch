@@ -1,0 +1,19 @@
+{
+  "name": "s3-batch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.448.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.41.1",
+    "serverless-s3-batch": "^1.0.1"
+  }
+}
