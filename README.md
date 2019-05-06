@@ -8,7 +8,7 @@ If you're running an S3 Batch operation that invokes a Lambda function, you may 
 
 - Launching your S3 Batch job
 
-For a deep dive and walkthrough on S3 Batch and this plugin, check out [this blog post](TODO).
+For a deep dive and walkthrough on S3 Batch and this plugin, check out [this blog post](https://www.alexdebrie.com/posts/s3-batch/).
 
 ## Contents:
 
