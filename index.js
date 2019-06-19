@@ -316,15 +316,13 @@ class S3BatchPlugin {
     return this.serverless.service.custom.s3batch
   }
 
-  // From s3://my-bucket/my-path/my-file, returns
+  // From s3://my-bucket/my-path, returns 
   //  {
   //    bucket: "my-bucket",
-  //    path: "my-path/my-file"
+  //    path: "my-path"
   //  }
   parseS3(s3path) {
-    const pathBits = s3path.replace(/^(s3:\/\/)/,"").split('/')
-    const bucket = pathBits.shift()
-    const path = pathBits.join("/")
+    const [bucket, path] = s3path.replace(/^(s3:\/\/)/,"").split('/', 2)
     return {
       bucket,
       path
