@@ -86,7 +86,7 @@ class S3BatchPlugin {
         .then((response) => {
           this.serverless.cli.log(`S3 Batch Job created. Job Id: ${response.JobId}`)
           this.serverless.cli.log('')
-          this.serverless.cli.log(`View in browser: https://console.aws.amazon.com/s3/jobs/${response.JobId}?region=${this.serverless.service.provider.region}`)
+          this.serverless.cli.log(`View in browser: https://console.aws.amazon.com/s3/jobs/${response.JobId}`)
         })
     })
   }
