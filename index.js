@@ -322,10 +322,10 @@ class S3BatchPlugin {
   //    path: "my-path"
   //  }
   parseS3(s3path) {
-    const [bucket, path] = s3path.replace(/^(s3:\/\/)/,"").split('/', 2)
+    const [bucket, ...pathParts] = s3path.replace(/^(s3:\/\/)/,"").split('/')
     return {
       bucket,
-      path
+      path: pathParts.join('/')
     }
   }
 
