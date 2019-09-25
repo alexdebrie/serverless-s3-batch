@@ -1,6 +1,6 @@
 {
   "name": "serverless-s3-batch",
-  "version": "1.0.1-rc3",
+  "version": "1.0.1",
   "description": "Serverless plugin to assist with S3 Batch jobs",
   "main": "index.js",
   "scripts": {
